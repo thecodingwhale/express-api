@@ -4,14 +4,20 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "prettier":  "prettier --single-quote --trailing-comma es5 --print-width 120 --write --no-bracket-spacing **/*.js",
+    "pretest": "eslint --ignore-path .gitignore . -- --fix",
     "start": "nodemon ./server.js --exec babel-node"
   },
   "author": "Aldren Terante",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-preset-latest": "^6.24.1",
-    "nodemon": "^1.17.2"
+    "eslint": "^4.19.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "nodemon": "^1.17.2",
+    "prettier": "^1.11.1"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
