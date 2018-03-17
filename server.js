@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import Task from './models/taskModel'; // eslint-disable-line
 import routes from './routes/tasks';
 
@@ -10,6 +11,8 @@ const port = process.env.PORT || 3000;
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/todoDB');
+
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
