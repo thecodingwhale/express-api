@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon ./server.js --exec babel-node"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Aldren Terante",
+  "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
