@@ -1,7 +1,6 @@
-'use strict';
-module.exports = function(app) {
-  var todoList = require('../controllers/taskController');
+import * as todoList from '../controllers/taskController';
 
+export default (app) => {
   // todoList Routes
   app.route('/tasks')
     .get(todoList.list_all_tasks)

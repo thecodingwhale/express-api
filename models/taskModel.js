@@ -1,9 +1,7 @@
-'use strict';
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+import mongoose from 'mongoose';
 
-
-var TaskSchema = new Schema({
+const Schema = mongoose.Schema;
+const TaskSchema = new Schema({
   name: {
     type: String,
     required: 'Kindly enter the name of the task'
@@ -21,4 +19,4 @@ var TaskSchema = new Schema({
   }
 });
 
-module.exports = mongoose.model('Tasks', TaskSchema);
+export default mongoose.model('Tasks', TaskSchema);
