@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const Task = mongoose.model('Tasks');
 
 export function list_all_tasks(req, res) {
-  Task.find({}, (err, task) => {
+  Task.find().sort('-created_date').find((err, task) => {
     if (err) res.send(err);
     res.json(task);
   });
